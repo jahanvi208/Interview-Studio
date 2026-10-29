@@ -1,0 +1,34 @@
+test_duplicate (test_core.CoreTests.test_duplicate) ... ok
+test_generation_and_schema (test_core.CoreTests.test_generation_and_schema) ... ok
+test_provider_errors_are_safe (test_core.CoreTests.test_provider_errors_are_safe) ... ok
+test_semantic_failures (test_core.CoreTests.test_semantic_failures) ... ok
+test_truncation (test_core.CoreTests.test_truncation) ... ok
+test_valid_and_export (test_core.CoreTests.test_valid_and_export) ... ok
+test_1000_sessions_and_100_updates (test_database.DatabaseTests.test_1000_sessions_and_100_updates) ... ok
+test_connection_is_closed (test_database.DatabaseTests.test_connection_is_closed) ... ok
+test_injection_unicode_and_delete_isolation (test_database.DatabaseTests.test_injection_unicode_and_delete_isolation) ... ok
+test_integrity_and_key_exclusion (test_database.DatabaseTests.test_integrity_and_key_exclusion) ... ok
+test_parallel_independent_writes (test_database.DatabaseTests.test_parallel_independent_writes) ... ok
+test_persist_across_process (test_database.DatabaseTests.test_persist_across_process) ... ok
+test_source_backed_dataset_roundtrip (test_database.DatabaseTests.test_source_backed_dataset_roundtrip) ... ok
+test_transaction_rollback (test_database.DatabaseTests.test_transaction_rollback) ... ok
+test_append_rejects_previous_and_sends_history (test_features.FeatureTests.test_append_rejects_previous_and_sends_history) ... ok
+test_duplicate_similarity (test_features.FeatureTests.test_duplicate_similarity) ... ok
+test_empty_answer (test_features.FeatureTests.test_empty_answer) ... ok
+test_feedback_grounding_and_bounds (test_features.FeatureTests.test_feedback_grounding_and_bounds) ... ok
+test_mixed_requirement (test_features.FeatureTests.test_mixed_requirement) ... ok
+test_pdf_modes (test_features.FeatureTests.test_pdf_modes) ... ok
+test_storage_roundtrip_and_delete (test_features.FeatureTests.test_storage_roundtrip_and_delete) ... ok
+test_valid_append_and_evaluation (test_features.FeatureTests.test_valid_append_and_evaluation) ... ok
+test_failed_replace_preserves_data (test_session_tools.SessionToolTests.test_failed_replace_preserves_data) ... ok
+test_import_new_id_and_no_extras (test_session_tools.SessionToolTests.test_import_new_id_and_no_extras) ... ok
+test_reject_bad_backup (test_session_tools.SessionToolTests.test_reject_bad_backup) ... ok
+test_reject_bad_feedback (test_session_tools.SessionToolTests.test_reject_bad_feedback) ... ok
+test_reject_invalid_references (test_session_tools.SessionToolTests.test_reject_invalid_references) ... ok
+test_replace_only_selected_and_no_mutation (test_session_tools.SessionToolTests.test_replace_only_selected_and_no_mutation) ... ok
+test_generate_append_save_reopen_and_export (test_ui.UITests.test_generate_append_save_reopen_and_export) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 5.914s
+
+OK

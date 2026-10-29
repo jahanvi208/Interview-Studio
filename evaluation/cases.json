@@ -1,0 +1,146 @@
+[
+  {
+    "id": "case_01",
+    "request": {
+      "role": "AI Engineer",
+      "skills": "Python, RAG, evaluation",
+      "experience": "Intern / Fresher",
+      "difficulty": "Mixed",
+      "interview_type": "Mixed",
+      "count": 3,
+      "job_description": "Build and maintain reliable solutions using Python, RAG, evaluation. Explain tradeoffs and collaborate with the team."
+    }
+  },
+  {
+    "id": "case_02",
+    "request": {
+      "role": "AI Engineer",
+      "skills": "Python, RAG, evaluation",
+      "experience": "Senior",
+      "difficulty": "Mixed",
+      "interview_type": "Mixed",
+      "count": 3,
+      "job_description": "Build and maintain reliable solutions using Python, RAG, evaluation. Explain tradeoffs and collaborate with the team."
+    }
+  },
+  {
+    "id": "case_03",
+    "request": {
+      "role": "Backend Developer",
+      "skills": "Python, SQL, REST",
+      "experience": "Intern / Fresher",
+      "difficulty": "Mixed",
+      "interview_type": "Mixed",
+      "count": 3,
+      "job_description": "Build and maintain reliable solutions using Python, SQL, REST. Explain tradeoffs and collaborate with the team."
+    }
+  },
+  {
+    "id": "case_04",
+    "request": {
+      "role": "Backend Developer",
+      "skills": "Python, SQL, REST",
+      "experience": "Senior",
+      "difficulty": "Mixed",
+      "interview_type": "Mixed",
+      "count": 3,
+      "job_description": "Build and maintain reliable solutions using Python, SQL, REST. Explain tradeoffs and collaborate with the team."
+    }
+  },
+  {
+    "id": "case_05",
+    "request": {
+      "role": "Data Analyst",
+      "skills": "SQL, statistics",
+      "experience": "Intern / Fresher",
+      "difficulty": "Mixed",
+      "interview_type": "Mixed",
+      "count": 3,
+      "job_description": "Build and maintain reliable solutions using SQL, statistics. Explain tradeoffs and collaborate with the team."
+    }
+  },
+  {
+    "id": "case_06",
+    "request": {
+      "role": "Data Analyst",
+      "skills": "SQL, statistics",
+      "experience": "Senior",
+      "difficulty": "Mixed",
+      "interview_type": "Mixed",
+      "count": 3,
+      "job_description": "Build and maintain reliable solutions using SQL, statistics. Explain tradeoffs and collaborate with the team."
+    }
+  },
+  {
+    "id": "case_07",
+    "request": {
+      "role": "QA Engineer",
+      "skills": "testing, automation",
+      "experience": "Intern / Fresher",
+      "difficulty": "Mixed",
+      "interview_type": "Mixed",
+      "count": 3,
+      "job_description": "Build and maintain reliable solutions using testing, automation. Explain tradeoffs and collaborate with the team."
+    }
+  },
+  {
+    "id": "case_08",
+    "request": {
+      "role": "QA Engineer",
+      "skills": "testing, automation",
+      "experience": "Senior",
+      "difficulty": "Mixed",
+      "interview_type": "Mixed",
+      "count": 3,
+      "job_description": "Build and maintain reliable solutions using testing, automation. Explain tradeoffs and collaborate with the team."
+    }
+  },
+  {
+    "id": "case_09",
+    "request": {
+      "role": "Frontend Developer",
+      "skills": "JavaScript, accessibility",
+      "experience": "Intern / Fresher",
+      "difficulty": "Mixed",
+      "interview_type": "Mixed",
+      "count": 3,
+      "job_description": "Build and maintain reliable solutions using JavaScript, accessibility. Explain tradeoffs and collaborate with the team."
+    }
+  },
+  {
+    "id": "case_10",
+    "request": {
+      "role": "Frontend Developer",
+      "skills": "JavaScript, accessibility",
+      "experience": "Senior",
+      "difficulty": "Mixed",
+      "interview_type": "Mixed",
+      "count": 3,
+      "job_description": "Build and maintain reliable solutions using JavaScript, accessibility. Explain tradeoffs and collaborate with the team."
+    }
+  },
+  {
+    "id": "case_11",
+    "request": {
+      "role": "Cybersecurity Analyst",
+      "skills": "incident response, networking",
+      "experience": "Intern / Fresher",
+      "difficulty": "Mixed",
+      "interview_type": "Mixed",
+      "count": 3,
+      "job_description": "Build and maintain reliable solutions using incident response, networking. Explain tradeoffs and collaborate with the team."
+    }
+  },
+  {
+    "id": "case_12",
+    "request": {
+      "role": "Cybersecurity Analyst",
+      "skills": "incident response, networking",
+      "experience": "Senior",
+      "difficulty": "Mixed",
+      "interview_type": "Mixed",
+      "count": 3,
+      "job_description": "Build and maintain reliable solutions using incident response, networking. Explain tradeoffs and collaborate with the team."
+    }
+  }
+]

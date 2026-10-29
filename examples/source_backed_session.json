@@ -1,0 +1,449 @@
+{
+  "id": "787d7f599f534165bfbf067707d1877b",
+  "request": {
+    "role": "AI / Python Engineer",
+    "experience": "Junior",
+    "difficulty": "Moderate",
+    "interview_type": "Technical",
+    "skills": "Python, SQL, model evaluation",
+    "job_description": "",
+    "count": 3
+  },
+  "model": "openai/gpt-oss-120b",
+  "pack": {
+    "title": "Source-backed interview practice - manually authored",
+    "role_summary": "Twelve documentation-grounded practice questions. Not reported company questions or live model outputs.",
+    "assumptions": [
+      "References: https://docs.python.org/3/howto/functional.html",
+      "References: https://docs.python.org/3/library/sqlite3.html",
+      "References: https://docs.python.org/3/tutorial/datastructures.html",
+      "References: https://scikit-learn.org/stable/common_pitfalls.html",
+      "References: https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "References: https://www.postgresql.org/docs/current/transaction-iso.html"
+    ],
+    "questions": [
+      {
+        "question": "A config dictionary may lack 'timeout'. How would you safely default to 30, and what if the stored value is None?",
+        "competency": "Missing dictionary key",
+        "difficulty": "Moderate",
+        "kind": "Technical",
+        "minutes": 5,
+        "expected_answer": "Use config.get('timeout', 30). An existing None remains None; handle that explicitly if needed.",
+        "follow_ups": [
+          "Show a concrete example of your approach.",
+          "What failure case would you test?"
+        ],
+        "rubric": [
+          {
+            "name": "Missing-key default",
+            "points": 4,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Existing None handling",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Concrete example",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          }
+        ]
+      },
+      {
+        "question": "A function must remove duplicate values while preserving their first appearance. How would you approach this for hashable values?",
+        "competency": "List mutation",
+        "difficulty": "Moderate",
+        "kind": "Technical",
+        "minutes": 5,
+        "expected_answer": "Track seen values with a set and append unseen values to a result list in input order.",
+        "follow_ups": [
+          "Show a concrete example of your approach.",
+          "What failure case would you test?"
+        ],
+        "rubric": [
+          {
+            "name": "Order preservation",
+            "points": 4,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Membership tracking",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Hashability limitation",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          }
+        ]
+      },
+      {
+        "question": "Why does reading the same generator twice produce no values on the second pass?",
+        "competency": "Generator exhaustion",
+        "difficulty": "Moderate",
+        "kind": "Technical",
+        "minutes": 5,
+        "expected_answer": "A generator retains progress and is exhausted after iteration. Create another generator or materialize results to reuse them.",
+        "follow_ups": [
+          "Show a concrete example of your approach.",
+          "What failure case would you test?"
+        ],
+        "rubric": [
+          {
+            "name": "Single-pass behavior",
+            "points": 4,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Exhaustion explanation",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Reuse strategy",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          }
+        ]
+      },
+      {
+        "question": "How would you process records without constructing a list of every transformed record first?",
+        "competency": "Lazy processing",
+        "difficulty": "Moderate",
+        "kind": "Technical",
+        "minutes": 5,
+        "expected_answer": "Iterate lazily with a generator expression or yield and consume results incrementally. Downstream list conversion still materializes them.",
+        "follow_ups": [
+          "Show a concrete example of your approach.",
+          "What failure case would you test?"
+        ],
+        "rubric": [
+          {
+            "name": "Lazy production",
+            "points": 4,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Incremental consumption",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Materialization caveat",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          }
+        ]
+      },
+      {
+        "question": "How should a SQLite lookup safely handle a user-supplied title containing quotes?",
+        "competency": "Parameterized queries",
+        "difficulty": "Moderate",
+        "kind": "Technical",
+        "minutes": 5,
+        "expected_answer": "Pass the title through a placeholder, such as WHERE title = ?, with a parameter tuple instead of SQL interpolation.",
+        "follow_ups": [
+          "Show a concrete example of your approach.",
+          "What failure case would you test?"
+        ],
+        "rubric": [
+          {
+            "name": "Placeholder use",
+            "points": 4,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Separate parameter binding",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Injection explanation",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          }
+        ]
+      },
+      {
+        "question": "Does leaving a Python sqlite3 connection context manager automatically close the connection?",
+        "competency": "Connection lifecycle",
+        "difficulty": "Moderate",
+        "kind": "Technical",
+        "minutes": 5,
+        "expected_answer": "No. The connection context manages transaction commit or rollback, not closure. Explicitly close it or use a closing wrapper.",
+        "follow_ups": [
+          "Show a concrete example of your approach.",
+          "What failure case would you test?"
+        ],
+        "rubric": [
+          {
+            "name": "Transaction handling",
+            "points": 4,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Explicit closure",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Exception-safe cleanup",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          }
+        ]
+      },
+      {
+        "question": "Under PostgreSQL Read Committed, can two SELECT statements in one transaction see different committed values?",
+        "competency": "Read committed snapshots",
+        "difficulty": "Moderate",
+        "kind": "Technical",
+        "minutes": 5,
+        "expected_answer": "Yes. Each statement can take a fresh snapshot, so another transaction committing between them may change what the next statement sees.",
+        "follow_ups": [
+          "Show a concrete example of your approach.",
+          "What failure case would you test?"
+        ],
+        "rubric": [
+          {
+            "name": "Statement snapshot",
+            "points": 4,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Concurrent commit",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Consequence",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          }
+        ]
+      },
+      {
+        "question": "Why might an application need retry logic when using PostgreSQL Serializable transactions?",
+        "competency": "Serialization retries",
+        "difficulty": "Moderate",
+        "kind": "Technical",
+        "minutes": 5,
+        "expected_answer": "Conflicting concurrent transactions can cause serialization failures. Retry the complete transaction, not merely its last statement.",
+        "follow_ups": [
+          "Show a concrete example of your approach.",
+          "What failure case would you test?"
+        ],
+        "rubric": [
+          {
+            "name": "Conflict explanation",
+            "points": 4,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Failure recognition",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Whole-transaction retry",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          }
+        ]
+      },
+      {
+        "question": "A scaler is fitted before the train/test split. What is wrong and how should the workflow change?",
+        "competency": "Preprocessing leakage",
+        "difficulty": "Moderate",
+        "kind": "Technical",
+        "minutes": 5,
+        "expected_answer": "Test data influenced preprocessing. Split first, fit preprocessing on training data and transform held-out data without fitting it.",
+        "follow_ups": [
+          "Show a concrete example of your approach.",
+          "What failure case would you test?"
+        ],
+        "rubric": [
+          {
+            "name": "Leak recognition",
+            "points": 4,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Train-only fitting",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Held-out transformation",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          }
+        ]
+      },
+      {
+        "question": "How can a preprocessing-and-model pipeline help prevent leakage during cross-validation?",
+        "competency": "Cross-validation pipeline",
+        "difficulty": "Moderate",
+        "kind": "Technical",
+        "minutes": 5,
+        "expected_answer": "Each fold fits preprocessing on its training partition, then applies those learned steps to its validation partition.",
+        "follow_ups": [
+          "Show a concrete example of your approach.",
+          "What failure case would you test?"
+        ],
+        "rubric": [
+          {
+            "name": "Fold-local fitting",
+            "points": 4,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Validation isolation",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Pipeline use",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          }
+        ]
+      },
+      {
+        "question": "A detector reports 20 positives: 15 are correct and 5 are false alarms. What is precision?",
+        "competency": "Precision calculation",
+        "difficulty": "Moderate",
+        "kind": "Technical",
+        "minutes": 5,
+        "expected_answer": "Precision is 15 divided by 20, or 0.75. It measures the fraction of predicted positives that are correct.",
+        "follow_ups": [
+          "Show a concrete example of your approach.",
+          "What failure case would you test?"
+        ],
+        "rubric": [
+          {
+            "name": "Correct denominator",
+            "points": 4,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Calculation",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Interpretation",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          }
+        ]
+      },
+      {
+        "question": "A detector finds 12 true positives and misses 8 positives. What is recall?",
+        "competency": "Recall calculation",
+        "difficulty": "Moderate",
+        "kind": "Technical",
+        "minutes": 5,
+        "expected_answer": "Recall is 12 divided by 20, or 0.60. The denominator includes all actual positives.",
+        "follow_ups": [
+          "Show a concrete example of your approach.",
+          "What failure case would you test?"
+        ],
+        "rubric": [
+          {
+            "name": "Actual-positive denominator",
+            "points": 4,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Calculation",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          },
+          {
+            "name": "Interpretation",
+            "points": 3,
+            "zero": "No relevant evidence or an incorrect claim.",
+            "partial": "Addresses this criterion but omits an important detail.",
+            "full": "Correctly explains this criterion with relevant evidence."
+          }
+        ]
+      }
+    ]
+  },
+  "answers": {},
+  "feedback": {}
+}

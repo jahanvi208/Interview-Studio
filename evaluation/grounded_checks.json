@@ -1,0 +1,16 @@
+{
+  "fixture_count": 12,
+  "fixture_validation": "pass",
+  "executable_reference_checks": {
+    "missing_default": true,
+    "existing_none": true,
+    "ordered_dedup": true,
+    "generator_exhausted": true,
+    "precision": true,
+    "recall": true,
+    "bound_quote_value": true,
+    "context_does_not_close": true
+  },
+  "live_model_evaluation": "not run: no key in build workspace",
+  "company_question_provenance": "not claimed"
+}
